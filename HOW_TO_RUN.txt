@@ -1,0 +1,66 @@
+🧠 HOW TO RUN RAGify (PDF AI Assistant)
+
+RAGify lets you:
+✅ Upload a PDF
+✅ Extract and download clean text
+✅ Ask GPT-3.5 questions about the PDF content only (not the internet)
+
+---
+
+✅ STEP 1: Open Terminal and go to the RAGify folder
+
+cd ~/Documents/"GitHub Projects"/RAGify
+
+---
+
+✅ STEP 2: Enter your OpenAI API key manually (every time you run it)
+
+export OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxx"
+
+(Replace with your actual OpenAI key. It is temporary and disappears after you close Terminal.)
+
+---
+
+✅ STEP 3: Start the RAGify app
+
+python3 -m streamlit run app.py
+
+---
+
+✅ STEP 4: Use the app in your browser
+
+- Upload a PDF
+- Wait for it to process
+- 📥 Click "Download Clean Text File" to save the output
+- ❓ Ask GPT-powered questions about the PDF content
+- Done!
+
+The app will open at: http://localhost:8501
+
+---
+
+📁 FILES:
+
+- `clean_text.txt` → the clean output text from your PDF
+  - Use this with:
+    - 📘 NotebookLM (as a source)
+    - 🤖 CustomGPTs (upload in the GPT builder)
+    - 🧩 AI Agents or RAG systems
+
+---
+
+📌 NOTES:
+
+- You must install the dependencies **once** (if you're on a new Mac):
+  pip3 install streamlit langchain langchain-community openai faiss-cpu pypdf
+
+- If `pip3` doesn’t work, try:
+  python3 -m pip install [package]
+
+---
+
+🚀 Optional: Use the `start.sh` file to automate launching
+
+1. Open Terminal
+2. Run: ./start.sh
+3. Then manually enter your OpenAI key as shown above
